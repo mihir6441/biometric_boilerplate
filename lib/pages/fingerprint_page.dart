@@ -83,7 +83,7 @@ class FingerprintPage extends StatelessWidget {
     onClicked: () async {
       final isAuthenticated = await LocalAuthApi.authenticate();
 
-      if (isAuthenticated) {
+      if (!isAuthenticated) {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => HomePage()),
         );

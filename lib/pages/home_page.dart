@@ -1,5 +1,5 @@
 import 'package:biometric_demo/main.dart';
-import 'package:biometric_demo/pages/fingerprint_page.dart';
+import 'package:biometric_demo/pages/notice_dialog_box.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -38,8 +38,8 @@ class HomePage extends StatelessWidget {
       'Logout',
       style: TextStyle(fontSize: 20),
     ),
-    onPressed: () => Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const FingerprintPage()),
+    onPressed: () => Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => const NoticeDialogBox()),
     ),
   );
 
